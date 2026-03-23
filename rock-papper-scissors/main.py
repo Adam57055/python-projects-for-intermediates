@@ -1,8 +1,8 @@
-import random #import
+import random 
 
 
 def winner(user, cpu):
-    #in cases where CPU is winner
+#in cases where CPU is winner
     if (user == "Rock" and cpu == "Paper") or (user == "Paper" and cpu == "Scissor") or (user == "Scissor" and cpu == "Rock"):
         return "\nUser : " + user + "\nCPU : " + cpu + "\nWinner : CPU"
     #in cases where User is winner
@@ -18,10 +18,11 @@ options = ["Rock", "Paper", "Scissor"]
 while True:
     UI = input("\nEnter Your Choice (rock, paper, scissor) : ").title()
     
+    #program continues
     if UI not in options:
-        continue #program continues
+        continue 
     print(winner(UI, random.choice(options)))
 
     YN = input("\nPlay Again? (yes/no) : ").lower()
     if YN == "no":
-        break #program ends
+        break 
